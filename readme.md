@@ -2,7 +2,8 @@
 
 This repository hosts a ES module library which patches the `localStorage`
 window object in the browser and prefixes all keys used with `setItem`,
-`getItem` and `removeItem` with the value of `location.pathname`.
+`getItem` and `removeItem` with the value of `location.pathname`. The `clear`
+function only applies to keys with prefix `location.pathname`.
 
 This makes it possible to use `localStorage` in apps hosted on GitHub Pages and
 coming from the same account without worrying about these apps all sharing the
@@ -13,7 +14,7 @@ See more on https://tomashubelbauer.github.io/github-pages-local-storage.
 ## Usage
 
 ```javascript
-import 'https://tomashubelbauer.github.io/github-pages-local-storage/index.js';
+import 'https://kim-lan.github.io/github-pages-local-storage/index.js';
 
 // Use `localStorage` as you normally would now
 ```
@@ -24,6 +25,6 @@ served with the `text/javascript` MIME type required for ESM.
 
 ## To-Do
 
-### Patch `key`, `length`, `clear` etc.
+### Patch `key`, `length`, etc.
 
 I have not patched these because I don't need them now, but I might do it later.
